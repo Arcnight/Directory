@@ -1,0 +1,11 @@
+services:
+  directory.api:
+    build:
+      context: C:\AppDev\Arcnight\Directory\src
+      dockerfile: Directory.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: directory.api
+    ports:
+    - 80/tcp
+version: '3.0'
