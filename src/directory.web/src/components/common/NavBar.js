@@ -1,6 +1,5 @@
 import React from 'react'
 import {PropTypes as T} from 'prop-types'
-import {SearchBox} from 'office-ui-fabric-react/lib/SearchBox'
 
 import 'assets/styles/NavBar.css'
 

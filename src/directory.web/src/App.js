@@ -1,32 +1,45 @@
-import React from 'react';
-import {Fabric} from 'office-ui-fabric-react/lib/Fabric'
+import React, { Component } from 'react'
+import { Container, Sidebar, Segment, Button, Menu, Icon, Header } from 'semantic-ui-react'
 
-import Content from 'components/home/Content.js'
-import Footer from 'components/common/Footer.js'
-import NavBar from 'components/common/NavBar.js'
-import SidebarMenu from 'components/common/SidebarMenu.js'
+import Content from 'components/home/'
 
-class App extends React.Component {
-  render() {
-    return (
-      <Fabric className="App">
-        <div className="header">
-          <NavBar />
-        </div>        
-        <div className="body">
-          <div className="content">
-            <Content />
-          </div>
-          <div className="sidebar">
-            <SidebarMenu />
-          </div>      
-        </div>
-        <div className="footer">
-          <Footer />
-        </div>
-      </Fabric>
-    );
-  }
+class App extends Component {
+    state = { visible: false, dimmed: false }
+
+    toggleVisibility = () => this.setState({ visible: !this.state.visible, dimmed: !this.state.dimmed })
+
+    componentDidMount() {
+        this.toggleVisibility = this.toggleVisibility.bind(this);
+    }
+
+    render() {
+        const { visible, dimmed } = this.state
+        return (
+            <div>
+                <Header as='h3'>Application Content</Header>
+                <Button onClick={this.toggleVisibility}>Toggle Visibility</Button>
+                <Sidebar.Pushable>
+                    <Sidebar as={Menu} animation='uncover' width='thin' visible={visible} icon='labeled' vertical inverted>
+                        <Menu.Item name='home'>
+                        <Icon name='home' />
+                        Home
+                        </Menu.Item>
+                        <Menu.Item name='gamepad'>
+                        <Icon name='gamepad' />
+                        Games
+                        </Menu.Item>
+                        <Menu.Item name='camera'>
+                        <Icon name='camera' />
+                        Channels
+                        </Menu.Item>
+                    </Sidebar>
+                    <Sidebar.Pusher dimmed={ dimmed }>
+                        <Content />
+                    </Sidebar.Pusher>
+                </Sidebar.Pushable>
+            </div>
+        )
+    }  
 }
 
-export default App;
+export default App

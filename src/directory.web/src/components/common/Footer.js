@@ -1,16 +1,15 @@
 import React from 'react'
-import {Link} from 'office-ui-fabric-react/lib/Link'
 
 import 'assets/styles/Footer.css'
 
 const Footer = () => (
   <div className="footer-container">
     {'© Awesome App 2016. '}
-    <Link href="https://github.com/guzmonne/office-ui-layout/tree/01-blank-project">Get in touch!</Link>
+    <a href="https://github.com/guzmonne/office-ui-layout/tree/01-blank-project">Get in touch!</a>
     {' -- Made with '}
     <span className="text-red">♥</span>
     {' by '}
-    <Link href="https://github.com/guzmonne">Guzmán Monné {'<@guzmonne>'}</Link>    
+    <a href="https://github.com/guzmonne">Guzmán Monné {'<@guzmonne>'}</a>    
   </div>
 )
 
