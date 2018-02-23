@@ -50,3 +50,8 @@ header and footer components.
 .App .footer {
   height: 4em;
 }
+
+#LeftNav div.ui.vertical.labeled.icon.uncover.left.thin.sidebar.menu,
+#LeftNav div.ui.vertical.labeled.icon.uncover.left.thin.visible.sidebar.menu {
+  background-color: transparent;
+}

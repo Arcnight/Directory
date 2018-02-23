@@ -1,3 +1,11 @@
 .content {
-    background-color: #F2F4F9;
+    flex: 1;
+    padding: 5px;
+    min-height: 100vh;
+    background-color: #FFF; /* #e4e2e0; */
+}
+
+#LeftNav .pusher {
+    display: flex;
+    min-height: 100vh;
 }

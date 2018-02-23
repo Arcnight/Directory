@@ -3,14 +3,22 @@
     padding: 0;
   }
   
-  body {
-    color: #333;
-    font-size: 16px;
-    background: #22262F;
-    overflow-x: hidden;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 16px;
+  overflow-x: hidden;
+  background: #e4e2e0; /* #22262F; */
+  font-size: 16px;
+  font-family: sans-serif;
+}
   
-  .app {
-    min-height: 100%;
-  }
+.app {
+  min-height: 100%;
+}
   
+.ui.inverted.top.fixed.menu {
+  box-shadow: 0 0 5px rgba(0,0,0,1);
+  background-color: #112e51;
+}
