@@ -8,7 +8,9 @@ import 'assets/styles/App.css';
 class App extends Component {
     state = { visible: false, dimmed: false }
 
-    toggleVisibility = () => this.setState({ visible: !this.state.visible, dimmed: !this.state.dimmed })
+    toggleVisibility = () => {
+        this.setState({ visible: !this.state.visible, dimmed: !this.state.dimmed });
+    }
 
     componentDidMount() {
         this.toggleVisibility = this.toggleVisibility.bind(this);
@@ -16,11 +18,14 @@ class App extends Component {
 
     render() {
         const { visible, dimmed } = this.state
+
         return (
             <Fragment>
                 <Menu fixed='top' inverted>
                     <Menu.Item as='a' header onClick={this.toggleVisibility}>
-                        <Icon name='bars' />
+                        <div id="nav-icon4" className={ visible ? "open" : "closed" }>
+                            <span></span><span></span><span></span>
+                        </div>
                     </Menu.Item>
                     <Container>
                         <Menu.Item as='a'>Home</Menu.Item>
@@ -44,7 +49,7 @@ class App extends Component {
                     </Container>
                 </Menu>
                 <Sidebar.Pushable id="LeftNav">
-                    <Sidebar as={Menu} animation='uncover' width='thin' visible={visible} icon='labeled' vertical>
+                    <Sidebar as={Menu} animation='push' width='thin' visible={visible} icon='labeled' vertical>
                         <Menu.Item name='home'>
                             <Icon name='home' /> Home
                         </Menu.Item>
