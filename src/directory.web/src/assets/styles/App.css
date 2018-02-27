@@ -1,57 +1,80 @@
-/* 
-Set the main wrapper component to 
-take up the entire height of the page
- */
-.App {
-  min-height: 100vh; 
-}
 /*
-To use Flexbox we need to set the display
-setting of the container component to flex.
-The we set the direction of the wrapped 
-components. By default flexbox will order 
-them by row, but we can also tell it to do
-it by column.
-*/
-.App {
-  display: flex;
-  flex-direction: column;
+.marginlefting {
+    margin-left: 60px !important;
 }
-/*
-Something similar is done to the body 
-element, except we order the wrapped 
-component as rows.
 */
-.App .body {
-  display: flex;
-  flex-direction: row;
-}
-/*
-Flexbox let's us reorder the way the 
-elements are placed inside the wrapper
-component. Using the order rule, we move
-the sidebar to the left of the content 
-component. We also set its width to 12em
-and set its flex propertires so it doesn't
-grow or shrink with the rest of the page.
-*/
-.body .sidebar {
-  order: -1;
-  max-width: 12em;
-  flex-grow: 0;    /* Defined the ability to groe */
-  flex-shrink: 0;  /* Defines the ability to shrink */
-  flex-basis: 12em;/* Default value of the element before distribuing the remaing space */
-}
-/*
-Lastly we give some custom height to our 
-header and footer components.
-*/
-.App .header,
-.App .footer {
-  height: 4em;
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
 }
 
-#LeftNav div.ui.vertical.labeled.icon.uncover.left.thin.sidebar.menu,
-#LeftNav div.ui.vertical.labeled.icon.uncover.left.thin.visible.sidebar.menu {
-  background-color: transparent;
+html,
+body {
+    height: 100%;
+    min-height: 100% !important;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #333;
+    background: #e4e2e0; /* #22262F; */
 }
+
+#root {
+    height: 100%;
+    min-height: 100%;
+}
+
+.ui.menu {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.ui.sidebar {
+    border: 0px !important;
+    top: unset !important;
+}
+
+.openbtn {
+    width: 61px;
+}
+
+.displaynone {
+    display: none !important;
+}
+
+.displayblock {
+    display: block !important;
+}
+
+.mainnav.ui.sidebar {
+    top: 49px !important;
+}
+
+.mainnav.ui.sidebar .item i {
+    font-size: 24px;
+    margin-top: -5px !important;
+}
+
+.logo {
+    height: 48px !important;
+    padding: 10px !important;
+}
+
+.logo img {
+    width: 100% !important;
+    height: 38px !important;
+}
+
+.title.item {
+    padding: .92857143em 1.14285714em !important;
+}
+
+.dropdown .menu .header {
+    padding-top: 3.9px !important;
+    padding-bottom: 3.9px !important;
+}
+
+/*
+.appbody {
+    padding-left: 61px;
+}
+*/
