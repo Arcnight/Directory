@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import 'assets/styles/home.css'
 
 export default () =>
-<div className='content'>
+<Fragment>
     <div>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Faucibus pulvinar elementum integer enim neque volutpat ac. Eu mi bibendum neque egestas congue quisque egestas diam in. Quam viverra orci sagittis eu volutpat. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Odio facilisis mauris sit amet massa vitae. Et tortor at risus viverra adipiscing at in tellus. Nunc eget lorem dolor sed. Sagittis purus sit amet volutpat consequat. Varius morbi enim nunc faucibus a pellentesque. Odio pellentesque diam volutpat commodo. Leo vel orci porta non pulvinar neque. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Quis blandit turpis cursus in hac habitasse. Cursus sit amet dictum sit amet justo. A arcu cursus vitae congue mauris rhoncus. Vel eros donec ac odio tempor orci dapibus.
     </div>
@@ -19,4 +19,4 @@ export default () =>
     <div>
     Venenatis cras sed felis eget velit aliquet sagittis. Non odio euismod lacinia at quis risus. Semper risus in hendrerit gravida rutrum quisque. Consequat nisl vel pretium lectus quam id leo in. In hac habitasse platea dictumst quisque sagittis. Id venenatis a condimentum vitae sapien pellentesque. Libero justo laoreet sit amet cursus sit amet dictum. Sagittis orci a scelerisque purus semper eget. Pharetra vel turpis nunc eget. Tortor pretium viverra suspendisse potenti nullam ac.
     </div>
-</div>
+</Fragment>
